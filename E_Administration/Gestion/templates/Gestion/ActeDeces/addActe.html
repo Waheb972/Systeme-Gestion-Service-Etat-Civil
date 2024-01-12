@@ -1,0 +1,14 @@
+{% extends 'Gestion/ActeDeces/Acte.html' %}
+
+{% block acte_inst %}
+<fieldset>
+
+    <h1>Ajouter un Acte de Deces</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Envoyer" id="envoyer">
+    </form>>
+</fieldset>
+{% endblock %}

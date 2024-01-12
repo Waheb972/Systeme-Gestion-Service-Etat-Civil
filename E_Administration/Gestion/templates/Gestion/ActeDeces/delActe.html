@@ -1,0 +1,12 @@
+{% extends 'Gestion/ActeDeces/Acte.html' %}
+
+{% block acte_inst %}
+<fieldset>
+  <h1>Supprimer un Acte de Deces</h1>
+    <p>Etes vous sur de vouloir supprimer l'Acte Civil de {{ form.Nom }} {{ form.Prenom }} ? </p>
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Supprimer" id="envoyer">
+ </form>
+</fieldset>
+{% endblock %}

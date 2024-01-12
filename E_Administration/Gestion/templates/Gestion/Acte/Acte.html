@@ -1,0 +1,36 @@
+{% extends 'Gestion/base.html' %}
+
+{% block content %}
+
+{% include 'Gestion/ActeCivil.html' %}
+
+    <p>Tableau des Acte Civils</p>
+
+    <table width="100%" border="1" style="border-collapse:collapse;margin-top:3%;text-align:center;">
+        <thead>
+            <tr>
+                <th>Matricule</th> <th>Nom</th> <th>Prenom</th> <th>Sexe</th> <th>Bureau</th> <th>Officier</th> <th>Modifier</th> <th>Supprimer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for element in data %}
+                <tr>
+                    <td>{{element.Matricule}}</td>
+                    <td>{{element.Nom}}</td>
+                    <td>{{element.Prenom}}</td>
+                    <td>{{element.Sexe}}</td>
+                    <td>{{element.bureau}}</td>
+                    <td>{{element.Officier}}</td>
+                    <td><a href="{% url 'updActe' element.Matricule %}">edit</a></td>
+                    <td><a href="{% url 'delActe' element.Matricule %}">X</a></td>
+                </tr>
+             {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'addActe'%}"><input type="submit" value="Ajouter un Acte Civil"></a>
+    <a href="{% url 'addActeN'%}"><input type="submit" value="Ajouter un Acte de Naissance"></a>
+
+    {% block acte_inst %}{% endblock %}
+
+{% endblock %}

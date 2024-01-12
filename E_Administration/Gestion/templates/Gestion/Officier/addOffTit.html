@@ -1,0 +1,13 @@
+{% extends 'Gestion/Officier/OfficierTitulaire.html' %}
+
+{% block off_inst_tit %}
+<fieldset>
+    <h1>Ajouter un Officier</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Envoyer" id="envoyer">
+    </form>>
+</fieldset>
+{% endblock %}

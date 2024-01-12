@@ -1,0 +1,15 @@
+{% extends 'Gestion/base.html' %}
+
+{% block Bienvenue %}
+<fieldset>
+    <h2>Bienvenue dans l'ecran d'Officier</h2>
+    <h3>Quel taches souhaiteriez vous effectuer ?</h3>
+    <ul>
+        <li><a href="{% url 'Acte'%}">Acte de Naissance</a></li>
+        <li><a href="{% url 'ActeM'%}">Acte de Mariage</a></li>
+        <li><a href="{% url 'ActeD'%}">Acte de Deces</a></li>
+    </ul>
+</fieldset>
+{% block tit %}{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% load static %}
+
+<html>
+    <head><title>E-Administration</title></head>
+    <link rel="stylesheet" type="text/css" href=" {% static '/Gestion/style.css' %} ">
+
+    <body>
+        <h1>E-Administration</h1>
+        {% block Bienvenue %}{% endblock %}
+        {% block content %}{% endblock %}
+
+    </body>
+</html>

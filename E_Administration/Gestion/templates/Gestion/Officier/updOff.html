@@ -1,0 +1,13 @@
+{% extends 'Gestion/Officier/Officier.html' %}
+
+{% block off_inst %}
+<fieldset id="form">
+  <h1>Mise à jour Officier</h1>
+
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Modifier" id="envoyer">
+ </form>
+</fieldset>
+{% endblock %}

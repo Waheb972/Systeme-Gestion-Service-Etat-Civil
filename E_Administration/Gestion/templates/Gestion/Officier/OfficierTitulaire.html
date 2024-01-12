@@ -1,0 +1,31 @@
+{% extends 'titulaire.html' %}
+
+{% block tit %}
+
+    <p>Tableau des Officiers</p>
+
+    <table width="100%" border="1" style="border-collapse:collapse;margin-top:3%;text-align:center;">
+        <thead>
+            <tr>
+                <th>Matricule</th> <th>Nom</th> <th>Prenom</th> <th>Date d'emploie</th> <th>Actif</th> <th>Role</th> <th>Bureau</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for element in dataOfficier %}
+                <tr>
+                    <td>{{element.Matricule}}</td>
+                    <td>{{element.Nom}}</td>
+                    <td>{{element.Prenom}}</td>
+                    <td>{{element.Date}}</td>
+                    <td>{{element.Actif}}</td>
+                    <td>{{element.Role}}</td>
+                    <td>{{element.Bureau}}</td>
+                </tr>
+             {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'addOffTit'%}"><input type="submit" value="Ajouter"></a>
+    {% block off_inst_tit %}{% endblock %}
+
+{% endblock %}

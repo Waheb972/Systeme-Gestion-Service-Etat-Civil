@@ -1,0 +1,12 @@
+{% extends 'Gestion/Officier/Officier.html' %}
+
+{% block off_inst %}
+<fieldset>
+  <h1>Supprimer un Officier</h1>
+    <p>Etes vous sur de vouloir supprimer l'officier {{ off.Nom }} {{ off.Prenom }} ? </p>
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Supprimer" id="envoyer">
+ </form>
+</fieldset>
+{% endblock %}

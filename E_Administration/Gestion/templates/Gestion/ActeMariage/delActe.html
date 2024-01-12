@@ -1,0 +1,12 @@
+{% extends 'Gestion/ActeMariage/Acte.html' %}
+
+{% block acte_inst %}
+<fieldset>
+  <h1>Supprimer un Acte de Mariage</h1>
+    <p>Etes vous sur de vouloir supprimer l'Acte de Mariage entre {{ form.marie }} {{ form.femme }} ? </p>
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Supprimer" id="envoyer">
+ </form>
+</fieldset>
+{% endblock %}
